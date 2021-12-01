@@ -3,7 +3,12 @@ const handleCreateTask = (event) => {
 
   const input = document.querySelector('[data-form-input]');
   const valorInput = input.value;
-  console.log(valorInput);
+
+  const itemTask = document.querySelector('[data-task]');
+  const contentTask = `<p class='content'>${valorInput}</p>`;
+
+  itemTask.innerHTML = contentTask;
+
   input.value = '';
 };
 
