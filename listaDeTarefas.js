@@ -3,11 +3,15 @@ const handleCreateTask = (event) => {
 
   const input = document.querySelector('[data-form-input]');
   const valorInput = input.value;
+  const list = document.querySelector('[data-list]');
 
-  const itemTask = document.querySelector('[data-task]');
+  const task = document.createElement('li');
+  task.classList = 'task';
+
   const contentTask = `<p class='content'>${valorInput}</p>`;
 
-  itemTask.innerHTML = contentTask;
+  task.innerHTML = contentTask;
+  list.appendChild(task);
 
   input.value = '';
 };
